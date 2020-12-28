@@ -1,0 +1,9 @@
+
+.catalog {
+    display: inline-block;
+    height: 90px;
+}
+
+.thumb-select {
+    border: 2px solid #2874f0 !important;
+}

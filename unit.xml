@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<testsuite name="HeadlessChrome 76.0.3809 (Mac OS X 10.14.5)" package="unit" timestamp="2019-08-13T01:39:39" id="0" hostname="Gopals-MacBook-Pro.local" tests="16" errors="0" failures="0" time="0.815">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/76.0.3809.100 Safari/537.36"/>
+  </properties>
+  <testcase name="AppComponent should create the catalog-viewer app" time="0.16" classname="unit.AppComponent"/>
+  <testcase name="AppComponent page should contain the catalog UI elements" time="0.098" classname="unit.AppComponent"/>
+  <testcase name="CatalogItemComponent the first catalog thumb should have a background image &quot;/assets/images/thumb/mobile-front-thumb.jpeg&quot;" time="0.018" classname="unit.CatalogItemComponent"/>
+  <testcase name="CatalogItemsComponent catalog thumb icons length should be equal to catalog items length" time="0.031" classname="unit.CatalogItemsComponent"/>
+  <testcase name="CatalogItemsComponent click/hover on catalog thumb should update the viewer image" time="0.025" classname="unit.CatalogItemsComponent"/>
+  <testcase name="CatalogItemsComponent selected thumb should be highlighted with blue border by applying css class &quot;thumb-select" time="0.031" classname="unit.CatalogItemsComponent"/>
+  <testcase name="CatalogViewComponent catalog view should display first img element by default" time="0.017" classname="unit.CatalogViewComponent"/>
+  <testcase name="CatalogComponent should catalog-view load with first item of catalog" time="0.043" classname="unit.CatalogComponent"/>
+  <testcase name="CatalogComponent Clicking on previous button should show the previous image" time="0.042" classname="unit.CatalogComponent"/>
+  <testcase name="CatalogComponent Clicking on next button should show the next image" time="0.046" classname="unit.CatalogComponent"/>
+  <testcase name="CatalogComponent Clicking on next button in the last item should show the first image" time="0.058" classname="unit.CatalogComponent"/>
+  <testcase name="CatalogComponent Clicking on previous button in the first item should show the last image" time="0.035" classname="unit.CatalogComponent"/>
+  <testcase name="CatalogComponent Clicking on any indicator icon should show the appropriate image" time="0.047" classname="unit.CatalogComponent"/>
+  <testcase name="CatalogComponent when slide enabled should change the image for every 3 seconds" time="0.039" classname="unit.CatalogComponent"/>
+  <testcase name="CatalogComponent when slide enabled also user interaction like previous, next or indecator should work as expected" time="0.089" classname="unit.CatalogComponent"/>
+  <testcase name="CatalogComponent uncheck slide should stop changing the image for every 3 seconds" time="0.036" classname="unit.CatalogComponent"/>
+  <system-out>
+    <![CDATA[
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>
