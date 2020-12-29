@@ -1,4 +1,5 @@
 import {async, ComponentFixture, fakeAsync, flush, TestBed, tick} from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
 
 import {CatalogComponent} from './catalog.component';
 import {CatalogItemsComponent} from '../catalog-items/catalog-items.component';
@@ -29,6 +30,7 @@ describe('CatalogComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [ FormsModule ],
       declarations: [ CatalogComponent, CatalogItemsComponent, CatalogViewComponent, CatalogItemComponent ]
     })
     .compileComponents();

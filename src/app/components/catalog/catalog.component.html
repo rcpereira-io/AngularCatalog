@@ -7,11 +7,11 @@
         </div>
     </div>
     <div class="catalog-items">
-        <div class="previous" >
-            <img src="../../../assets/icons/left-icon.png" (click)="previousClick()">
+        <div class="previous" (click)="previousClick()">
+            <img src="../../../assets/icons/left-icon.png">
         </div>
-        <div class="next" >
-            <img src="../../../assets/icons/right_icon.png" (click)="nextClick()">
+        <div class="next" (click)="nextClick()">
+            <img src="../../../assets/icons/right_icon.png">
         </div>
         <app-catalog-items [items]="catalogs" [currentIndex]="currentIndex" (selectedCatalog)="selectedCatalog($event)"></app-catalog-items>
     </div>

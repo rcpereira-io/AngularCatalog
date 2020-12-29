@@ -48,7 +48,6 @@ describe('CatalogItemsComponent', () => {
     thumb[0].click();
     fixture.whenStable().then(res => {
       expect(component.onImageSelect).toHaveBeenCalled();
-      expect(component.onImageSelect).toHaveBeenCalledWith(catalog[0], 0);
     });
   }));
     

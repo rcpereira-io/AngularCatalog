@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { AppModule } from './app.module';
 import {By} from '@angular/platform-browser';
 import {DebugElement} from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import {CatalogComponent} from './components/catalog/catalog.component';
 import {CatalogItemsComponent} from './components/catalog-items/catalog-items.component';
 import {CatalogViewComponent} from './components/catalog-view/catalog-view.component';
@@ -37,7 +38,7 @@ describe('AppComponent', () => {
       declarations: [
           AppComponent, CatalogComponent, CatalogItemsComponent, CatalogViewComponent, CatalogItemComponent
       ],
-      imports: []
+      imports: [ FormsModule ]
     });
     TestBed.compileComponents();
   });

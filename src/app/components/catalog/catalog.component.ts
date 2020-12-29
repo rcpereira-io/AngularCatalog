@@ -46,35 +46,38 @@ export class CatalogComponent implements OnInit {
   previousClick() {
     this.currentIndex = (this.currentIndex > 0) ? this.currentIndex -= 1 : this.currentIndex = this.catalogs.length - 1;
     this.selectedCatalog(this.currentIndex);
-    this.resetSlideTimer();
   }
 
   nextClick() {
     this.currentIndex = (this.currentIndex < this.catalogs.length - 1) ? this.currentIndex += 1 : this.currentIndex = 0;
     this.selectedCatalog(this.currentIndex);
-    this.resetSlideTimer();
   }
 
   slideChange(checked) {
-    if (checked && this.slideTimer) {
-      clearInterval(this.slideTimer);
-      return;
+    if (checked && !this.slideTimer) {
+      this.slideTimer = setInterval(() => {
+        this.onSlideChange();
+      }, this.slideDuration);
     }
-
-    this.onSlideChange();
   }
 
   resetSlideTimer() {
     if (this.slideAtive) {
-      clearInterval(this.slideTimer);
-      this.onSlideChange();
+      this.clearSlideTimer();
+      this.slideChange(this.slideAtive);
     }
   }
 
   onSlideChange = function() {
-    this.slideTimer = setInterval(() => {
-      this.nextClick(); 
-    }, this.slideDuration);
+    this.nextClick();
+    if (!this.slideAtive) {
+      this.clearSlideTimer();
+    }
+  }
+
+  clearSlideTimer() {
+    clearInterval(this.slideTimer);
+    this.slideTimer = null;
   }
 }
 
