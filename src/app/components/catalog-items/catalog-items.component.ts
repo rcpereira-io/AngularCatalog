@@ -16,7 +16,9 @@ export class CatalogItemsComponent implements OnInit {
   ngOnInit() {
   }
 
-  onImageSelect() {
+  onImageSelect(index: number) {
+    this.currentIndex = index;
+    this.selectedCatalog.emit(this.currentIndex);
   }
 
 }

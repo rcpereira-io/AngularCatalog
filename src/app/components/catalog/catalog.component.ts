@@ -34,31 +34,47 @@ export class CatalogComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-   
+    this.nextClick();
   }
 
   selectedCatalog(index: number) {
-    
+    this.currentIndex = index;
+    this.catalogSelected = this.catalogs[index];
+    this.resetSlideTimer();
   }
 
   previousClick() {
-    
+    this.currentIndex = (this.currentIndex > 0) ? this.currentIndex -= 1 : this.currentIndex = this.catalogs.length - 1;
+    this.selectedCatalog(this.currentIndex);
+    this.resetSlideTimer();
   }
 
   nextClick() {
-    
+    this.currentIndex = (this.currentIndex < this.catalogs.length - 1) ? this.currentIndex += 1 : this.currentIndex = 0;
+    this.selectedCatalog(this.currentIndex);
+    this.resetSlideTimer();
   }
 
   slideChange(checked) {
-    
+    if (checked && this.slideTimer) {
+      clearInterval(this.slideTimer);
+      return;
+    }
+
+    this.onSlideChange();
   }
 
   resetSlideTimer() {
-    
+    if (this.slideAtive) {
+      clearInterval(this.slideTimer);
+      this.onSlideChange();
+    }
   }
 
   onSlideChange = function() {
-    
+    this.slideTimer = setInterval(() => {
+      this.nextClick(); 
+    }, this.slideDuration);
   }
 }
 
